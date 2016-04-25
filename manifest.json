@@ -1,0 +1,30 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "icon16.png",
+      "default_popup": "popup.html",
+      "default_title": "Weblioポップアップ英和辞典"
+   },
+   "content_scripts": [ {
+      "css": [ "style.css" ],
+      "js": [ "content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Webページの英語にマウスオーバーさせることで「英和辞典」での意味を表示させるポップアップ辞書機能や、文章を選択することで翻訳結果へスムーズに移動することができる機能を備えた、Weblio公式のエクステンションです。",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDEVviKGfb2beXt4MJJHS1lrRDyO9ibfe7cm+0Iav734alenDHqTqm8sbQm+fmbp/vz2HMNPTk+3jQmcXi5E6o4ysvOznjs5fUYq2Iy4aAvDMoYwvE7Pfdsrp0uSWJ5ZiZhsJTc58OL/YJ996JwNzrRKZC45lsugolxLFrb0pDb+wIDAQAB",
+   "manifest_version": 2,
+   "name": "Weblioポップアップ英和辞典",
+   "options_page": "options.html",
+   "permissions": [ "http://*/*", "https://*/*", "tabs", "contextMenus", "webNavigation", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.7"
+}

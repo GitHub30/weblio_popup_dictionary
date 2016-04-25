@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weblio英和辞典エクステンション オプション</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="popup.css">
+<script type="text/javascript" async="async" src="analytics.js"></script>
+<script type="text/javascript" async="async" src="popup.js"></script>
+</head>
+<body>
+<div ID=cnt>
+<div id=statusHd></div>
+
+<form name="chFormPr" class=ttl>
+<span class=ttlHd>ポップアップ機能：</span>
+<span class=ttlDc><input type="radio" name="act" value="on" ID=pupSchEblOn>ON&nbsp;<input type="radio" name="act" value="off" ID=pupSchEblOff>OFF</span>
+</form>
+
+<p class=ttl><span class=ttlHdSc>ポップアップのタイミング：</span></p>
+<form name="chFormTm" class=ttlB>
+<input type="radio" name="act" value="500" ID=pupSchEblOn>早め&nbsp;<input type="radio" name="act" value="800" ID=pupSchEblOff>標準&nbsp;<input type="radio" name="act" value="1500" ID=pupSchEblOff>遅め
+</form>
+
+<p class=ttl><span class=ttlHdSc>ポップアップ方法：</span></p>
+<form name="chForm" class=ttlB>
+<input type="radio" name="act" value="sel" ID=pupSchEblOn>カーソルを合わせる<br>
+<input type="radio" name="act" value="sel_ekey" ID=pupSchEblOff>カーソルを合わせる＋[Ctrl]キー<br>
+<input type="radio" name="act" value="mou" ID=pupSchEblOff>選択状態にする(ダブルクリックでも可)<br>
+<input type="radio" name="act" value="sel_mou" ID=pupSchEblOff>カーソルを合わせる、または選択状態にする<br>
+<input type="radio" name="act" value="e_key" ID=pupSchEblOff>選択状態にする＋[E]キー
+</form>
+
+<form name="chFormSmt" class=ttlSnd>
+<span class=ttlSndL><input type="button" value="保存する" ID=pUpStatus>&nbsp;&nbsp;<input type="button" value="キャンセル" ID=pClStatus></span>
+<span class=ttlSndR><a href="#" title="詳細設定" ID=pUpOpts>詳細設定</a></span>
+</form>
+
+<div class=bdHr></div>
+<p class=ttl><a href="http://uwl.weblio.jp/" title="マイ単語帳へログイン" target="_blank">マイ単語帳へログイン</a></p>
+<p class=comm>（新しいタブで開きます）</p>
+
+<p class=ttl><a href="http://ejje.weblio.jp/content/" title="Weblio英和和英辞典" target="_blank">Weblio英和和英辞典</a></p>
+<form action="http://ejje.weblio.jp/content/" name="fh" method="get" target="_blank">
+<input type="text" name="query" value="" ID=it><input type="submit" value="検索" ID=is>
+</form>
+<p class=comm>（検索結果を新しいタブで開きます）</p>
+
+<p class=ttl><a href="http://translate.weblio.jp/" title="Weblio翻訳" target="_blank">Weblio翻訳</a></p>
+<form method="post" action="http://translate.weblio.jp/" name="translate" target="_blank">
+<textarea name="originalText" cols="27" rows="4" id="originalMdlTextArea" class=trnsMdlBxTx></textarea>
+<table class=transTbl><tr>
+<td class=transTblL>
+<input type="radio" name="lp" value="EJ" checked><span>英語→日本語</span><br>
+<input type="radio" name="lp" value="JE"><span>日本語→英語</span>
+<input type="hidden" name="tm" value="">
+</td>
+<td class=transTblR><input type="button" value="翻訳する" class=trnsBtn ID=transBtn></td>
+</tr></table>
+</form>
+<p class=comm>（検索結果を新しいタブで開きます）</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Weblioポップアップ英和辞典オプション</title>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<script type="text/javascript" async="async" src="options.js"></script>
+<link rel="stylesheet" type="text/css" href="options.css">
+</head>
+<body>
+<div ID=wrp>
+
+<table ID=head>
+<tr>
+<td ID=headL><img src="logoE_LMD.png" alt=""></td>
+<td ID=headR><h1>Weblioポップアップ英和辞典オプション</h1></td>
+</tr>
+<tr>
+<td colspan="2" ID=headC>
+<button id=opBtnHd>保存する</button>
+<button id=opBtnCnclHd>キャンセル</button>
+<br><div id=statusHd></div>
+</td>
+</tr>
+</table>
+
+<div ID=tabPp>
+<table class=tab>
+<tr>
+<td class=tabOn ID=tabPp0><h2>ポップアップの設定</h2></td>
+<td class=tabOff ID=tabSw0><h2>表示の設定</h2></td>
+<td class=tabOff ID=tabOt0><h2>その他の設定</h2></td>
+<td class=tabBlk>&nbsp;</td>
+</tr>
+</table>
+
+<table class=menu>
+<tr>
+<th class=menuH><h3>ポップアップのON/OFF：</h3></th>
+<td class=menuT>
+<form name="chFormPr">
+<p class=contRdb><input type="radio" name="act" value="on" ID=opSchEblOn>ONにする</p>
+<p class=contRdb><input type="radio" name="act" value="off" ID=opSchEblOff>OFFにする(一時的に無効にする)</p>
+</form>
+</td>
+</tr>
+<tr>
+<th class=menuH><h3>ポップアップ操作：</h3></th>
+<td class=menuT>
+<form name="chForm">
+<div class=contWrp>
+<h4>英単語に<span class=org>マウスカーソルを合わせて</span>ポップアップさせる</h4>
+<table class=cont>
+<tr>
+<th class=contH><p><input type="radio" name="act" value="sel" ID=opSchSel>英単語にマウスカーソルをあわせてポップアップ</p></th>
+<td class=contT>
+<div class=frm>
+<p class=qerCsr>consider</p>
+<p class=descCsr>よく考える,熟考する</p>
+<img src="arw.png" alt="" class=arw>
+</div>
+</td>
+</tr>
+<tr>
+<th class=contH><p><input type="radio" name="act" value="sel_ekey" ID=opSchSelE>英単語にマウスカーソルをあわせ、<br>　　[Ctrl]キーを押してポップアップ <span style="font-size:10px;">*1</span></p></th>
+<td class=contT>
+<div class=frm>
+<p class=qerCsr>consider</p>
+<p class=descCsr>よく考える,熟考する</p>
+<img src="arw.png" alt="" class=arw>
+＋<img src="ctrl.png" alt="" class=ctrl></div>
+</td>
+</tr>
+</table>
+</div>
+<div class=contWrp>
+<h4>英単語を<span class=org>選択状態にして</span>ポップアップさせる</h4>
+<ul class=cmt>
+<li>単語に加え、イディオムも検索できるようになります。</li>
+<li>50文字以上を選択した場合、自動的に<a href="http://translate.weblio.jp/">Weblio翻訳</a>へのリンクが表示されます。</li>
+</ul>
+<table class=cont>
+<tr>
+<th class=contH><p><input type="radio" name="act" value="mou" ID=opSchMou>英単語を選択状態にしてポップアップ <br>　　単語1語の場合は、ダブルクリックで検索可能<span style="font-size:10px;">*2</span></p></th>
+<td class=contT>
+<div class=frm>
+<p class=qerSlct>take into account</p>
+<p class=descSlct>熟考した上で</p>
+<img src="crt.png" alt="" class=crt>
+</div>
+</td>
+</tr>
+<tr>
+<th class=contH><p><input type="radio" name="act" value="sel_mou" ID=opSchSelM>英単語にマウスカーソルをのせても、<br>　　選択状態にしてもどちらでもポップアップ</p></th>
+<td class=contT>
+<table class=lyo>
+<tr>
+<td>
+<div class=frm>
+<p class=qerSlct>take into account</p>
+<p class=descSlct>熟考した上で</p>
+<img src="crt.png" alt="" class=crt>
+</div>
+</td>
+<td style="font-size:13px;padding:0 5px 0 5px;vertical-align:middle;">
+and
+</td>
+<td>
+<div class=frm>
+<p class=qerCsr>consider</p>
+<p class=descCsr>よく考える,熟考する</p>
+<img src="arw.png" alt="" class=arw>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th class=contH><p><input type="radio" name="act" value="e_key" ID=opSchEKey>英単語を選択状態にし、Eキーを押してポップアップ <span style="font-size:10px;">*2</span></p></th>
+<td class=contT>
+<div class=frm>
+<p class=qerSlct>take into account</p>
+<p class=descSlct>熟考した上で</p>
+<img src="crt.png" alt="" class=crt>
+&nbsp;&nbsp;＋<img src="e.png" alt="" class=e></div>
+</td>
+</form>
+</tr>
+</table>
+</div>
+
+<p class=spl>*1 「<a href="https://chrome.google.com/webstore/detail/weblio-%C3%A3%C2%82%C2%A8%C3%A3%C2%82%C2%AF%C3%A3%C2%82%C2%B9%C3%A3%C2%83%C2%86%C3%A3%C2%83%C2%B3%C3%A3%C2%82%C2%B7%C3%A3%C2%83%C2%A7%C3%A3%C2%83%C2%B3/pgnfefoljgaelbckgfbijijhblgophjo?hl=ja">Weblio国語辞典エクステンション</a>」で「[Ctrl]キーを押して検索」を設定している場合、二重に検索されます)</p>
+<p class=spl>*2 リンクの文字も検索できるようになります</p>
+</td>
+</tr>
+</table>
+</div>
+
+<div ID=tabSw>
+<table class=tab>
+<tr>
+<td class=tabOff ID=tabPp1><h2>ポップアップの設定</h2></td>
+<td class=tabOn ID=tabSw1><h2>表示の設定</h2></td>
+<td class=tabOff ID=tabOt1><h2>その他の設定</h2></td>
+<td class=tabBlk>&nbsp;</td>
+</tr>
+</table>
+<table class=menu>
+<tr>
+<th class=menuH><h3>ポップアップする<br>ウィンドウの大きさ：</h3></th>
+<td class=menuT>
+<form name="chFormRs">
+<table ID=size>
+<tr>
+<td class=sizeL>
+<p class=contRdb><input type="radio" name="act" value="sml">小さいサイズ</p>
+</td>
+<td class=sizeR>
+<div class=sizeContS>
+<b>小さいサイズ</b>
+<span>70px(縦) × 350px(横)</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class=sizeL>
+<p class=contRdb><input type="radio" name="act" value="lg">大きいサイズ</p>
+<td class=sizeR>
+<div class=sizeContL>
+<b>大きいサイズ</b>
+<span>200px(縦) × 350px(横)</span>
+</div>
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+<tr>
+<th class=menuH><h3>右クリックに<br>Weblio<span class=org>英和辞典</span>を表示：</h3></th>
+<td class=menuT>
+<form name="chFormCt">
+<table ID=rclk>
+<tr>
+<td class=rclkL>
+<p class=contRdb><input type="radio" name="act" value="show">表示する</p>
+<p class=contRdb><input type="radio" name="act" value="noShow">表示しない</p>
+</td>
+<td class=rclkR>
+<div class=contWrpRc>
+<p class=rclkQry>consider</p>
+<div class=rclkMenuS>
+<ul class=rclkLiWrpS>
+<li class=rclkLi>コピー(C)</li>
+<li class=rclkLi>Googleで「consider」を検索(S)</li>
+<li class=rclkLi>Weblioポップアップ英和辞典</li>
+</ul>
+<img src="icon16.png" alt="" class=ejje>
+<p class=rclkBdrS>&nbsp;</p>
+<p class=triS>▼</p>
+</div>
+<div class=chldRWrpS>
+<p class=chldRT>英和辞典で「consider」を検索
+<span class=chldRBdrS>&nbsp;</span>
+</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+<tr>
+<th class=menuH><h3>右クリックに<br>Weblio<span class=org>翻訳</span>を表示：</h3></th>
+<td class=menuT>
+<form name="chFormTr">
+<table ID=rclk>
+<tr>
+<td class=rclkL>
+<p class=contRdb><input type="radio" name="act" value="show">表示する</p>
+<p class=contRdb><input type="radio" name="act" value="noShow">表示しない</p>
+</td>
+<td class=rclkR>
+<div class=contWrpRc>
+<p class=rclkQry>notification of rescheduling of next week’s</p>
+<div class=rclkMenuL>
+<ul class=rclkLiWrpL>
+<li class=rclkLi>コピー(C)</li>
+<li class=rclkLi>Googleで「notification of･･･」を検索(S)</li>
+<li class=rclkLi>Weblioポップアップ英和辞典</li>
+</ul>
+<img src="icon16.png" alt="" class=ejje>
+<p class=rclkBdrL>&nbsp;</p>
+<p class=triL>▼</p>
+</div>
+<div class=chldRWrpL>
+<p class=chldRT>「notification of･･･」を翻訳
+<span class=chldRBdrL>&nbsp;</span>
+</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</div>
+
+<div ID=tabOt>
+<table class=tab>
+<tr>
+<td class=tabOff ID=tabPp2><h2>ポップアップの設定</h2></td>
+<td class=tabOff ID=tabSw2><h2>表示の設定</h2></td>
+<td class=tabOn ID=tabOt2><h2>その他の設定</h2></td>
+<td class=tabBlk>&nbsp;</td>
+</tr>
+</table>
+<table class=menu>
+<tr>
+<th class=menuH><h3>ポップアップ<br>するまでの時間：</h3></th>
+<td class=menuT>
+<form name="chFormTm">
+<table ID=othr>
+<tr>
+<td class=othrL>
+<p class=contRdb><input type="radio" name="act" value="500">早くする</p>
+</td>
+<td class=othrR rowspan="3">
+通常は標準で問題ありません。
+<br>ポップアップするまでの表示が遅いと感じるときは「早くする」を選んで下さい。
+<br>意図しないポップアップが表示され過ぎると感じるときは「遅くする」を選んで下さい。
+</td>
+</tr>
+<tr>
+<td class=othrL>
+<p class=contRdb><input type="radio" name="act" value="800">標準</p>
+</td>
+</tr>
+<tr>
+<td class=othrL>
+<p class=contRdb><input type="radio" name="act" value="1500">遅くする</p>
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+
+<tr>
+<th class=menuH><h3>ショートカットキーで<br>オプション画面を表示：</h3></th>
+<td class=menuT>
+<form name="chFormOp">
+<table ID=othr>
+<tr>
+<td class=othrL>
+<p class=contRdb><input type="radio" name="act" value="op">有効にする</p>
+</td>
+<td class=othrR rowspan="2">
+ポップアップの操作方法をよく変更する場合に「有効にする」と便利です。
+<br>[Alt] ＋ [W] のショートカットキーで、オプション画面(この画面)を表示することができます。
+</td>
+</tr>
+<tr>
+<td class=othrL>
+<p class=contRdb><input type="radio" name="act" value="noOp">無効にする</p>
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+
+<tr>
+<th class=menuH><h3>リンクの文字の検索：</h3></th>
+<td class=menuT>
+<form name="chFormAs">
+<table ID=othr>
+<tr>
+<td class=othrL>
+<p class=contRdb><input type="radio" name="act" value="acSh">検索する</p>
+</td>
+<td class=othrR rowspan="2">
+「検索する」を選ぶと、リンクをクリックするタイミングでポップアップが表示されることがあります。
+</td>
+</tr>
+<tr>
+<td class=othrL>
+<p class=contRdb><input type="radio" name="act" value="acNSh">検索しない</p>
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+
+<tr>
+<th class=menuH><h3>高度な設定：</h3></th>
+<td class=menuT>
+<form name="chFormHi">
+<table ID=othr>
+<tr>
+<td class=othrL>
+<p class=contRdb><input type="radio" name="act" value="hsN">httpのみで<br>　　ポップアップ</p>
+</td>
+<td class=othrR colospan="2">
+「httpsでも可能な限りポップアップさせる」を選ぶと、facebookやTwitterなどのサイト上でもポップアップを表示できるようになります。
+</td>
+</tr>
+<tr>
+<td class=othrL>
+<p class=contRdb><input type="radio" name="act" value="hsS">httpsでも可能な<br>　　限りポップアップ</p>
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</div>
+
+<div ID=foot>
+<div id=status></div><br>
+<button id=opBtn>保存する</button>
+<button id=opBtnCncl>キャンセル</button>
+</div>
+
+</div>
+</body>
+</html>
